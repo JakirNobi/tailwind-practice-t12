@@ -13,10 +13,18 @@
     <!-- endfonts -->
     <title>Tailwind Landing Page</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      .btn-hover-color {
+        @apply transition delay-100 duration-300 ease-in-out   hover:shadow-lg hover:bg-purple-900 hover:shadow-purple-600/30;
+      }
+      .btn-hover {
+        @apply transition delay-100 duration-300 ease-in-out   hover:shadow-lg hover:bg-slate-400 hover:shadow-slate-600/30;
+      }
+    </style>
   </head>
   <body class="min-h-screen bg-white">
     <!-- navbar -->
-    <header id="navigation">
+    <header id="navigation" class="max-w-[2100px] m-auto">
       <div id="container" class="flex justify-between items-center my-6 mx-16">
         <div id="logo-image">
           <img src="images/logo.svg" alt="logo" />
@@ -29,19 +37,19 @@
           <a href="#">Contact</a>
         </div>
         <div id="login_signup" class="space-x-2">
-          <a href="#" id="login">Login</a>
-          <a
-            href="#"
+          <button id="login" class="btn-hover p-2 rounded-lg">Login</button>
+          <button
             id="get-started"
-            class="bg-purple-700 p-2 rounded-lg text-white"
-            >Get Started</a
+            class="bg-purple-700 p-2 rounded-lg text-white btn-hover-color"
           >
+            Get Started
+          </button>
         </div>
       </div>
     </header>
     <!-- hero section -->
-    <section id="hero">
-      <div id="container" class="grid grid-cols-[2fr_1fr]">
+    <section id="hero" class="max-w-[2100px] m-auto">
+      <div id="container" class="grid grid-cols-[2fr_1fr] my-6 mx-16">
         <div id="text" class="flex justify-center items-center">
           <div id="h1_p_button">
             <h1 class="text-7xl font-extrabold mb-6">
@@ -54,10 +62,14 @@
               growth.
             </p>
             <div id="button" class="mt-6">
-              <button class="bg-purple-500 rounded-lg p-2">
+              <button
+                class="bg-purple-700 text-white rounded-lg p-2 btn-hover-color"
+              >
                 Start 30 day free trial
               </button>
-              <button class="bg-white border border-slate-600 rounded-lg p-2">
+              <button
+                class="bg-white border border-slate-600 rounded-lg p-2 btn-hover"
+              >
                 Pricing & FAQ
               </button>
             </div>
@@ -69,12 +81,138 @@
         </div>
       </div>
     </section>
-    <section id="company">
-      <div id="image" class="flex justify-center items-center mt-4">
-        <img src="images/company.svg" alt="company" />
+    <section id="company" class="max-w-[2100px] m-auto">
+      <div id="container" class="mx-16 my-6">
+        <div id="image" class="flex justify-center items-center mt-4">
+          <img src="images/company.svg" alt="company" />
+        </div>
       </div>
     </section>
-    <section id="tools"></section>
+    <!-- Features section -->
+    <section id="features" class="max-w-[2100px] m-auto">
+      <div id="container" class="my-6 mx-16 mt-16">
+        <div id="content" class="flex flex-col gap-32">
+          <div id="row-1" class="grid grid-cols-[1fr_1fr] gap-24 items-center">
+            <div id="text-content" class="">
+              <div id="heading" class="mb-6 leading-[100%]">
+                <h2 class="font-bold text-5xl">
+                  Work with tools you already use
+                </h2>
+              </div>
+              <div id="support-text" class="leading-[150%] mb-12">
+                <p>
+                  Deliver great service experiences fast - without the
+                  complexity of traditional ITSM solutions.Accelerate critical
+                  development work, eliminate toil, and deploy changes with
+                  ease.
+                </p>
+              </div>
+              <div id="separator" class="w-[100%] h-[1px] bg-[#E5E7EB]"></div>
+              <div id="features-1">
+                <div id="list">
+                  <div id="features" class="flex items-center my-4">
+                    <div id="check-circle" class="mr-4 h-8 w-8">
+                      <img src="images/checkmark.svg" alt="checked" />
+                    </div>
+                    <div id="text" class="">
+                      <p>Continuous integration and deployment</p>
+                    </div>
+                  </div>
+                  <div id="features" class="flex items-center my-4">
+                    <div id="check-circle" class="mr-4 h-8 w-8">
+                      <img src="images/checkmark.svg" alt="checked" />
+                    </div>
+                    <div id="text" class="">
+                      <p>Development workflow</p>
+                    </div>
+                  </div>
+                  <div id="features" class="flex items-center my-4">
+                    <div id="check-circle" class="mr-4 h-8 w-8">
+                      <img src="images/checkmark.svg" alt="checked" />
+                    </div>
+                    <div id="text" class="">
+                      <p>Knowledge management</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="images-1">
+              <div>
+                <img src="images/features-1.png" alt="feature-1" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="row-1" class="grid grid-cols-[1fr_1fr] gap-24 items-center">
+          <div id="images-1">
+            <div>
+              <img src="images/feature-2.png" alt="feature-2" />
+            </div>
+          </div>
+
+          <div id="text-content" class="">
+            <div id="heading" class="mb-6 leading-[100%]">
+              <h2 class="font-bold text-5xl">
+                We invest in the world’s potential
+              </h2>
+            </div>
+            <div id="support-text" class="leading-[150%] mb-12">
+              <p>
+                Deliver great service experiences fast - without the complexity
+                of traditional ITSM solutions.Accelerate critical development
+                work, eliminate toil, and deploy changes with ease.
+              </p>
+            </div>
+            <div id="separator" class="w-[100%] h-[1px] bg-[#E5E7EB]"></div>
+            <div id="features-1">
+              <div id="list">
+                <div id="features" class="flex items-center my-4">
+                  <div id="check-circle" class="mr-4 h-8 w-8">
+                    <img src="images/checkmark.svg" alt="checked" />
+                  </div>
+                  <div id="text" class="">
+                    <p>Dynamic reports and dashboards</p>
+                  </div>
+                </div>
+                <div id="features" class="flex items-center my-4">
+                  <div id="check-circle" class="mr-4 h-8 w-8">
+                    <img src="images/checkmark.svg" alt="checked" />
+                  </div>
+                  <div id="text" class="">
+                    <p>Templates for everyone</p>
+                  </div>
+                </div>
+                <div id="features" class="flex items-center my-4">
+                  <div id="check-circle" class="mr-4 h-8 w-8">
+                    <img src="images/checkmark.svg" alt="checked" />
+                  </div>
+                  <div id="text" class="">
+                    <p>Development workflow</p>
+                  </div>
+                </div>
+                <div id="features" class="flex items-center my-4">
+                  <div id="check-circle" class="mr-4 h-8 w-8">
+                    <img src="images/checkmark.svg" alt="checked" />
+                  </div>
+                  <div id="text" class="">
+                    <p>Limitless business automation</p>
+                  </div>
+                </div>
+                <div id="features" class="flex items-center my-4">
+                  <div id="check-circle" class="mr-4 h-8 w-8">
+                    <img src="images/checkmark.svg" alt="checked" />
+                  </div>
+                  <div id="text" class="">
+                    <p>Knowledge management</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="about"></section>
     <section id="comment"></section>
     <section id="subscription"></section>
